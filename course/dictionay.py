@@ -1,0 +1,10 @@
+#dictionay
+print()
+a={
+    "name":"sujeevan",
+    "age":"20",
+    "location":"sathurukondan",
+    "friends":["sivee","seenu","vishan"]
+}
+print(a["name"])
+print(a["age"])
