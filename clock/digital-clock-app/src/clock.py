@@ -5,8 +5,12 @@ class DigitalClock:
     def __init__(self, master):
         self.master = master
         master.title("Digital Clock")
+        master.configure(bg="black")  # Set the window background to black
+        master.overrideredirect(True)  # Remove window borders
+        master.attributes("-topmost", True)  # Keep the window on top
+        master.attributes("-transparentcolor", "black")  # Make black color transparent (Windows-specific)
 
-        self.label = Label(master, font=("Helvetica", 48), bg="black", fg="white")
+        self.label = Label(master, font=("DS-Digital", 72), bg="black", fg="white")
         self.label.pack()
 
         self.update_clock()
